@@ -1,65 +1,406 @@
 {
   "info": {
-    "_postman_id": "9ebca197-858c-46f7-8ba9-f35da7cc0f49",
+    "_postman_id": "76a95a2d-5712-48db-a0bd-c75b57de8ad4",
     "name": "Students API - Arquitectura",
-    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "52068627",
-    "_collection_link": "https://go.postman.co/collection/52068627-9ebca197-858c-46f7-8ba9-f35da7cc0f49?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/52068627-76a95a2d-5712-48db-a0bd-c75b57de8ad4?source=collection_link"
   },
   "item": [
     {
-      "name": "crear estudiante",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"name\": \"Ana \",\r\n  \"email\": \"ana@email.com\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+      "name": "Students",
+      "item": [
+        {
+          "name": "Crear",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Ana Torres\", \"email\": \"ana@puce.edu.ec\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "students"
+              ]
             }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8787/students",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8787",
-          "path": [
-            "students"
-          ]
+        {
+          "name": "Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "students",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Ana Torres Ruiz\", \"email\": \"ana.torres@puce.edu.ec\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "students",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
+      ]
     },
     {
-      "name": "listar estudiante",
-      "request": {
-        "auth": {
-          "type": "noauth"
+      "name": "Professors",
+      "item": [
+        {
+          "name": "Crear",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Dr. García\", \"email\": \"garcia@puce.edu.ec\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/professors",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "professors"
+              ]
+            }
+          },
+          "response": []
         },
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8787/students",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8787",
-          "path": [
-            "students"
-          ]
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener por ID",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Dr. Roberto García\", \"email\": \"roberto.garcia@puce.edu.ec\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/professors/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "professors",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
+      ]
+    },
+    {
+      "name": "Subjects",
+      "item": [
+        {
+          "name": "Crear",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Arquitectura Empresarial\", \"code\": \"AE-101\", \"professorId\": 1}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/subjects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "subjects"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/subjects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "subjects"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/subjects/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "subjects",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Arquitectura Empresarial Avanzada\", \"code\": \"AE-201\", \"professorId\": 1}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/subjects/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "subjects",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Enrollments",
+      "item": [
+        {
+          "name": "Crear",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentId\": 1, \"subjectId\": 1}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/enrollments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "enrollments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/enrollments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "enrollments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8787/api/enrollments/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "enrollments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Estado",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"status\": \"APROBADO\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8787/api/enrollments/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8787",
+              "path": [
+                "api",
+                "enrollments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
